@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Buddy | Celebrate Every Moment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="brand">
+                <span class="brand-icon">🎂</span>
+                <span>Birthday Buddy</span>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Your celebration assistant
+            </div>
+        </nav>
+
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <div class="welcome-content">
+
+                <span class="eyebrow">
+                    ✨ A LITTLE MAGIC FOR EVERY SPECIAL DAY
+                </span>
+
+                <h1>
+                    Let's make<br>
+                    every birthday <span>special.</span>
+                </h1>
+
+                <p>
+                    Your personal birthday assistant.
+                    Find special dates, remember your loved ones
+                    and never miss a celebration.
+                </p>
+
+            </div>
+
+            <div class="birthday-art">
+                <div class="art-circle"></div>
+                <div class="cake">🎂</div>
+                <span class="balloon balloon-one">🎈</span>
+                <span class="balloon balloon-two">🎈</span>
+                <span class="sparkle sparkle-one">✦</span>
+                <span class="sparkle sparkle-two">✧</span>
+                <span class="sparkle sparkle-three">✦</span>
+            </div>
+
+        </section>
+
+
+        <!-- Chat Section -->
+        <main class="chat-section">
+
+            <div class="chat-header">
+
+                <div class="assistant-profile">
+                    <div class="assistant-avatar">🎀</div>
+
+                    <div>
+                        <h2>Your Birthday Assistant</h2>
+                        <p>Here to make your day brighter</p>
+                    </div>
+                </div>
+
+                <span class="online-label">
+                    <span class="status-dot"></span>
+                    Online
+                </span>
+
+            </div>
+
+
+            <!-- Messages -->
+            <div id="chat" class="chat-messages">
+
+                <div class="message bot-message">
+                    <div class="message-avatar">🎂</div>
+
+                    <div class="message-content">
+                        <span class="message-name">Birthday Buddy</span>
+
+                        <div class="message-bubble">
+                            Hey there! Welcome to Birthday Buddy! 💗
+
+                            I can help you find birthdays,
+                            check upcoming celebrations and
+                            remember everyone's special day.
+
+                            What would you like to know?
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Quick Suggestions -->
+            <div class="suggestions-section">
+
+                <p>Try asking me</p>
+
+                <div class="suggestion-list">
+
+                    <button class="suggestion"
+                        onclick="askSuggestion('What are the upcoming birthdays?')">
+                        🎉 Upcoming birthdays
+                    </button>
+
+                    <button class="suggestion"
+                        onclick="askSuggestion('Any birthdays tomorrow?')">
+                        📅 Birthdays tomorrow
+                    </button>
+
+                    <button class="suggestion"
+                        onclick="askSuggestion('Birthdays in September')">
+                        🎈 September birthdays
+                    </button>
+
+                    <button class="suggestion"
+                        onclick="askSuggestion('When is my wife birthday?')">
+                        💗 Family birthdays
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="q"
+                    placeholder="Ask me about someone's birthday..."
+                    autocomplete="off"
+                >
+
+                <button id="sendBtn" onclick="sendMsg()">
+                    Send <span>➤</span>
+                </button>
+
+            </div>
+
+            <p class="input-footer">
+                Made with love, birthdays and a little magic ✨
+            </p>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Birthday Buddy © 2026 · Every birthday deserves a celebration.</p>
+        </footer>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+</html>
