@@ -482,3 +482,128 @@ footer {
         padding: 10px 13px;
     }
 }
+
+/* ----------------------------------
+   V5 VOICE ASSISTANT CONTROLS
+---------------------------------- */
+
+/* Microphone button */
+#micBtn {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffe6ef;
+    color: #c76f96;
+    border: 1px solid #f2c8d9;
+    border-radius: 13px;
+
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+
+#micBtn:hover {
+    background: #fbd3e2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(210, 120, 160, 0.18);
+}
+
+/* Microphone listening state */
+#micBtn.listening {
+    background: #d96e96;
+    color: white;
+    border-color: #d96e96;
+
+    animation: micPulse 1.2s infinite;
+}
+
+@keyframes micPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(217, 110, 150, 0.45);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(217, 110, 150, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(217, 110, 150, 0);
+    }
+}
+
+/* Disabled microphone */
+#micBtn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+/* Voice control row */
+.voice-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 5px 0;
+}
+
+/* Listening / status text */
+#voiceStatus {
+    color: #a17d91;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Voice ON/OFF toggle */
+#speechToggle {
+    border: 1px solid #f0d5e1;
+    background: #fff2f7;
+    color: #b66d90;
+
+    padding: 8px 15px;
+    border-radius: 25px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: all 0.25s ease;
+}
+
+#speechToggle:hover {
+    background: #fce2ec;
+    border-color: #e89ab5;
+    transform: translateY(-1px);
+}
+
+#speechToggle:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+
+    #micBtn {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .voice-controls {
+        padding-top: 10px;
+    }
+
+    #voiceStatus {
+        font-size: 10px;
+    }
+
+    #speechToggle {
+        padding: 7px 11px;
+        font-size: 10px;
+    }
+}

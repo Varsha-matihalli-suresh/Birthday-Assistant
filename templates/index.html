@@ -144,28 +144,33 @@
 
 
             <!-- Input Area -->
-            <div class="chat-input-area">
+<div class="chat-input-area">
 
-                <input
-                    type="text"
-                    id="q"
-                    placeholder="Ask me about someone's birthday..."
-                    autocomplete="off"
-                >
+    <input
+        type="text"
+        id="q"
+        placeholder="Ask me about someone's birthday..."
+        autocomplete="off"
+    >
 
-                <button id="sendBtn" onclick="sendMsg()">
-                    Send <span>➤</span>
-                </button>
+    <button id="micBtn" type="button" title="Speak your question">
+        🎙️
+    </button>
 
-            </div>
+    <button id="sendBtn" onclick="sendMsg()">
+        Send <span>➤</span>
+    </button>
 
-            <p class="input-footer">
-                Made with love, birthdays and a little magic ✨
-            </p>
+</div>
 
-        </main>
+<!-- Voice Controls -->
+<div class="voice-controls">
+    <span id="voiceStatus">Voice assistant ready</span>
 
-
+    <button id="speechToggle" type="button">
+        🔊 Voice ON
+    </button>
+</div>
         <!-- Footer -->
         <footer>
             <p>Birthday Buddy © 2026 · Every birthday deserves a celebration.</p>
